@@ -27,8 +27,8 @@
         <div class="row">
             <div class="col-md-3"><div class="card"">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <h5 class="card-title">Instructions</h5>
+                  <p class="card-text">Click the button below to open a form and provide information.</p>
                   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                     Add Project
                   </button>
@@ -36,7 +36,20 @@
             </div>
         </div>
             
-        <div class="col-md-9">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae culpa deserunt doloremque natus quae. Impedit a alias suscipit, repellat eos illo inventore laboriosam repellendus? Impedit quam architecto ullam neque veniam, mollitia corporis, illo quis accusamus veritatis facilis quae aspernatur enim pariatur ea debitis incidunt maiores ad tenetur rerum non molestiae sed vitae explicabo! Dignissimos nemo veniam deleniti reiciendis fugit tempora consectetur facilis quibusdam itaque exercitationem, minus eaque. Necessitatibus nemo fugiat neque, itaque ipsum, aspernatur eveniet ex nulla quas, eaque quo? Non, cupiditate iste! Id saepe nesciunt dolor ullam eveniet minima ratione totam sit, iste suscipit, quis labore? Harum, aut ea.</div>
+        <div class="col-md-9">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Project Type</th>
+                        <th>Hourly Rate</th>
+                        <th>Due Date</th>
+                        <th>Estimated Profits</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     
     </div>
 
@@ -52,22 +65,29 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="project-name">Project Name</label>
-                    <input type="text" name="project-name" class="form-control"/>
+                    <label for="due-date">Project Name</label>
+                    <input type="text" name="project-name" class="form-control" placeholder="Enter the project's name"/>
                 </div>
-
                 <div class="form-group">
                     <label for="project-type">Project Type</label>
-                    <select class="form-control" id="project-type">
+                    <select class="form-control" name="project-type">
                       <option value="frontend">Frontend</option>
                       <option value="backend">Backend</option>
                       <option value="fullstack">Fullstack</option>
                     </select>
-                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Hourly Rate $</label>
+                    <input type="number" name="hourly-rate" class="form-control" placeholder="$"/>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due date</label>
+                    <input type="date" name="due-date" class="form-control" placeholder="When is the project due?"/>
+                </div>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-primary" id="add-button">Add</button>
             </div>
         </div>
         </div>
